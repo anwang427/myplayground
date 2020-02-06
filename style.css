@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Barlow';
+  src: url('fonts/Barlow-Light.eot');
+  src: url('fonts/Barlow-Light.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Barlow-Light.woff')format('woff'),
+       url('fonts/Barlow-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #FFFFFF;
+  perspective: 3000px;
+  height: 100vh;
+  flex-direction: column;
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  
+  transform: rotateX(50deg) rotateY(230deg);
+}
+
+div.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+
+div.book_front {
+  width: 360px;
+  height: 540px;
+  background-image: url(https://i.imgur.com/tkV5bA0.jpg);
+  transform: translateX(-50%) translateY(-50%) translateZ(30px);
+}
+
+div.book_side {
+  height: 540px;
+  width: 60px;
+  background-image: url(https://i.imgur.com/nddv2w0.jpg);
+  transform: translateX(-50%) translateY(-50%) rotateY(90deg) translateZ(180px);
+}
+
+div.book_spine {
+  height: 540px;
+  width: 60px;
+  background-image: url(https://i.imgur.com/WLNeCd2.jpg);
+  transform: translateX(-50%) translateY(-50%) rotateY(-90deg) translateZ(180px);
+}
+
+div.book_top {
+  height: 60px;
+  width: 360px;
+  background-image: url(https://i.imgur.com/Sw7k5Dg.jpg);
+  transform: translateX(-50%) translateY(-50%) rotateX(90deg) translateZ(270px);
+}
+
+div.book_bottom {
+  height: 60px;
+  width: 360px;
+  background-image: url(https://i.imgur.com/uxCufc6.jpg);
+  transform: translateX(-50%) translateY(-50%) rotateX(-90deg) translateZ(270px);
+}
+
+div.book_back {
+  width: 360px;
+  height: 540px;
+  background-image: url(https://i.imgur.com/EmSWf2O.jpg);
+  transform: translateX(-50%) translateY(-50%) rotateY(-180deg) translateZ(30px);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1f1f1f;
+    color: rgba(255, 255, 255, 0.83);
+    perspective: 3000px;
+    height: 100vh;
+    flex-direction: column;
+  }
+  a:link {
+    color: rgba(255, 255, 255, 0.95);
+  }
+  
+  a:visited {
+    color: rgba(231, 105, 91, 0.45);
+  }
+}
