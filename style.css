@@ -17,6 +17,10 @@ section {
   transform: rotateX(50deg) rotateY(230deg);
 }
 
+.scaled {
+  transform: scale3d(0.5, 0.5, 0.5);
+}
+
 div.face {
   position: absolute;
   top: 0;
